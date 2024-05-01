@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Raycast : MonoBehaviour
 {
@@ -80,6 +81,12 @@ public class Raycast : MonoBehaviour
     private int collectedCount = 0;
     private bool hasCollectedFirstItem = false;
     private bool allCollectablesCollected = false;
+    
+    public GameObject text;
+    private float textTime;
+    public float textTimeDelay;
+
+    private bool startTextTime = false;
     #endregion
 
     #region AUDIO
@@ -112,7 +119,7 @@ public class Raycast : MonoBehaviour
     private int bandageHealAmount = 5;
     private bool isInteractionTextVisible = false;
 
-
+    
     void Start()
     {
         clip += maxClipSize;
@@ -207,6 +214,17 @@ public class Raycast : MonoBehaviour
             }
         }
 
+        if (startTextTime)
+        {
+            textTime = textTime + 1f * Time.deltaTime;
+        }
+
+        if (textTime >= textTimeDelay)
+        {
+            startTextTime = false;
+            textTime = 0;
+            text.SetActive(false);
+        }
 
     }
 
@@ -310,6 +328,8 @@ public class Raycast : MonoBehaviour
                 hasGun = true;
                 Destroy(gun);
                 gunGFX.SetActive(true);
+                text.SetActive(true);
+                startTextTime = true;
             }
         }
     }
