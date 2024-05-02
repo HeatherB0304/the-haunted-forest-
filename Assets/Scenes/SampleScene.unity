@@ -11120,6 +11120,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+--- !u!1 &358090484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6722667250035450187, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+  m_PrefabInstance: {fileID: 358090483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &364362899 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 456639123305217028, guid: 6b32b5b04429eba4ea8d3c1a20335589, type: 3}
@@ -29225,7 +29230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prox: 3
-  enemy: {fileID: 0}
+  enemy: {fileID: 358090484}
   yourAudioClip: {fileID: 8300000, guid: 353b6621dd7a8684484b26c436c08812, type: 3}
 --- !u!1 &840752768 stripped
 GameObject:
@@ -38224,7 +38229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prox: 3
-  enemy: {fileID: 0}
+  enemy: {fileID: 1527748134}
   yourAudioClip: {fileID: 8300000, guid: 353b6621dd7a8684484b26c436c08812, type: 3}
 --- !u!82 &1087709212
 AudioSource:
@@ -54401,6 +54406,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+--- !u!1 &1527748134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6722667250035450187, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+  m_PrefabInstance: {fileID: 1527748133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531207806
 GameObject:
   m_ObjectHideFlags: 0
@@ -61237,7 +61247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prox: 5.43
-  enemy: {fileID: 0}
+  enemy: {fileID: 1700640347}
   yourAudioClip: {fileID: 8300000, guid: 353b6621dd7a8684484b26c436c08812, type: 3}
 --- !u!82 &1733271007
 AudioSource:
@@ -64574,6 +64584,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+--- !u!1 &1838459224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6722667250035450187, guid: fdc950dfbf27c8a4d9412b777ea52921, type: 3}
+  m_PrefabInstance: {fileID: 1838459223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839379673
 GameObject:
   m_ObjectHideFlags: 0
@@ -75505,7 +75520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prox: 3
-  enemy: {fileID: 0}
+  enemy: {fileID: 1838459224}
   yourAudioClip: {fileID: 8300000, guid: 353b6621dd7a8684484b26c436c08812, type: 3}
 --- !u!82 &2117145100
 AudioSource:
