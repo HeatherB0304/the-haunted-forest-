@@ -61,7 +61,6 @@ public class Raycast : MonoBehaviour
     #region Bools
     [Header("BOOLS")]
     bool hasRedKey = false;
-    bool hasGun = false;
     bool gunOut = false;
     #endregion
 
@@ -325,7 +324,7 @@ public class Raycast : MonoBehaviour
             if (hit.transform.gameObject.tag == "Gun")
             {
                 gunOut = true;
-                hasGun = true;
+                PlayerPrefs.SetInt("hasGun", 1);
                 Destroy(gun);
                 gunGFX.SetActive(true);
                 text.SetActive(true);
@@ -336,7 +335,7 @@ public class Raycast : MonoBehaviour
     
     void GunControls()
     {
-        if (hasGun)
+        if (PlayerPrefs.GetInt("hasGun") == 1)
         {
             clipUI.SetActive(true);
             ammoUI.SetActive(true);
@@ -369,7 +368,7 @@ public class Raycast : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, shootRange))
         {
-            if (hit.transform.gameObject.tag == "enemy" && hasGun && gunOut)
+            if (hit.transform.gameObject.tag == "enemy" && PlayerPrefs.GetInt("hasGun") == 1 && gunOut)
             {
                 hit.transform.gameObject.GetComponent<EnemyHealth>().TakeDamage(gunDamage);
             }
@@ -380,7 +379,7 @@ public class Raycast : MonoBehaviour
 
     void GunShootPhysics()
     {
-        if (hasGun && gunOut)
+        if (PlayerPrefs.GetInt("hasGun") == 1 && gunOut)
         {
             GameObject tempBullet = Instantiate(Bullet, bulletSpawn.position, Quaternion.identity);
             Rigidbody temprRB = tempBullet.GetComponent<Rigidbody>();

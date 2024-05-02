@@ -7,6 +7,7 @@ public class JumpscareEnemyManager : MonoBehaviour
     private Transform target;
     public float prox;
     private float dist;
+    private bool hasJumpscared = false;
 
     public GameObject enemy;
     public AudioClip yourAudioClip; // Assign your audio clip in the Unity Editor
@@ -37,10 +38,11 @@ public class JumpscareEnemyManager : MonoBehaviour
             enemy.SetActive(true);
 
             // Check if AudioSource and AudioClip are assigned
-            if (audioSource != null && yourAudioClip != null)
+            if (audioSource != null && yourAudioClip != null && !hasJumpscared)
             {
                 // Play the audio clip
                 audioSource.PlayOneShot(yourAudioClip);
+                hasJumpscared = true;
             }
             else
             {
